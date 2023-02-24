@@ -1,5 +1,10 @@
 # build output
 dist/
+public/apple-touch-icon.png
+public/favicon.ico
+public/icon-192.png
+public/icon-512.png
+
 
 # generated types
 .astro/

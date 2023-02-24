@@ -1,5 +1,6 @@
 # requires imagemagick and librsvg to be installed
 # $ brew install imagemagick librsvg
+# $ apt-get install imagemagick librsvg2-bin
 # public/icon.svg must be present
 
 cd public
