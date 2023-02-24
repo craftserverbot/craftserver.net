@@ -1,0 +1,16 @@
+---
+export interface Props {
+    href: string;
+}
+
+const { href } = Astro.props;
+---
+
+<a class="text-xl p-2 group" href={href}>
+    <div
+        class="transition-transform translate-y-1 group-hover:translate-y-0 group-hover:transition-none">
+        <slot />
+    </div>
+    <div class="relative w-full bg-white pt-1 invisible group-hover:visible">
+    </div>
+</a>

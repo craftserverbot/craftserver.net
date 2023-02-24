@@ -4,8 +4,9 @@ module.exports = {
 	theme: {
 		extend: {
             fontFamily: {
-                title: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', 'sans-serif'],
+                title: ['Futura', 'sans-serif'],
                 sans: ['Red Hat Text', 'Arial', 'sans-serif'],
+                mono: ['Menlo', 'Monaco', 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', 'monospace']
             }
         },
 	},

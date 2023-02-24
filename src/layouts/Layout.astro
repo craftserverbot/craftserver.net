@@ -1,4 +1,8 @@
 ---
+import "@fontsource/red-hat-text";
+import Navbar from "../components/Navbar.astro";
+import { INVITE_LINK, VOTE_LINK } from "../constants";
+
 export interface Props {
     title: string;
 }
@@ -11,17 +15,26 @@ const { title } = Astro.props;
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.webmanifest" />
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
     </head>
-    <body class="bg-neutral-100">
+    <body class="bg-gray-600">
+        <Navbar
+            links={{
+                Home: "/",
+                About: "/",
+                Invite: INVITE_LINK,
+                "Vote on Top.gg": VOTE_LINK,
+            }}
+        />
         <slot />
     </body>
 </html>
 <style is:global>
-    @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text&display=swap");
-
     :root {
         --accent: 124, 58, 237;
         --accent-gradient: linear-gradient(
@@ -36,9 +49,5 @@ const { title } = Astro.props;
         height: 100%;
         padding: 0;
         margin: 0;
-    }
-    code {
-        font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
     }
 </style>

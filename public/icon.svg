@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1024 1024">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #00742a;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: #7f5600;
+      }
+
+      .cls-4 {
+        fill: #744b00;
+      }
+
+      .cls-5 {
+        stroke: #7f5600;
+      }
+
+      .cls-5, .cls-6 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 40px;
+      }
+
+      .cls-6 {
+        stroke: #00742a;
+      }
+    </style>
+    <symbol id="Server_Rack" data-name="Server Rack" viewBox="0 0 774 256">
+      <g>
+        <rect class="cls-2" x="58" y="42" width="657" height="171"/>
+        <path class="cls-4" d="m646,70c31.98,0,58,26.02,58,58s-26.02,58-58,58H128c-31.98,0-58-26.02-58-58s26.02-58,58-58h518m0-70H128C57.31,0,0,57.31,0,128s57.31,128,128,128h518c70.69,0,128-57.31,128-128S716.69,0,646,0h0Z"/>
+        <circle class="cls-3" cx="643" cy="128" r="32"/>
+        <line class="cls-5" x1="167" y1="128" x2="448" y2="128"/>
+      </g>
+    </symbol>
+  </defs>
+  <rect class="cls-2" x="196" y="249" width="643" height="167"/>
+  <use width="774" height="256" transform="translate(126 570)" xlink:href="#Server_Rack"/>
+  <use width="774" height="256" transform="translate(126 384)" xlink:href="#Server_Rack"/>
+  <g>
+    <g>
+      <path class="cls-1" d="m770.33,268c31.9,0,57.85,26.02,57.85,58s-25.95,58-57.85,58H253.67c-31.9,0-57.85-26.02-57.85-58s25.95-58,57.85-58h516.66m0-70H253.67c-70.51,0-127.67,57.31-127.67,128s57.16,128,127.67,128h516.66c70.51,0,127.67-57.31,127.67-128s-57.16-128-127.67-128h0Z"/>
+      <ellipse class="cls-1" cx="767.34" cy="326" rx="31.92" ry="32"/>
+    </g>
+    <line class="cls-6" x1="292.57" y1="326" x2="572.84" y2="326"/>
+  </g>
+</svg>

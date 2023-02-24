@@ -1,0 +1,32 @@
+---
+import logo from "../assets/logo.png";
+
+import { Image } from "@astrojs/image/components";
+import NavbarLink from "./NavbarLink.astro";
+
+export interface Props {
+    links: Record<string, string>;
+}
+
+const { links } = Astro.props;
+---
+
+<nav
+    class="bg-gray-600/80 text-white flex items-center justify-between p-4 w-full sticky top-0 z-20 backdrop-blur-xl">
+    <a href="/">
+        <Image
+            src={logo}
+            alt="CraftServer logo"
+            width={70}
+            aspectRatio={1 / 1}
+            class="rounded-[100%] hover:rounded-3xl min-w-[70px] transition-all ease-in-out"
+        />
+    </a>
+    <div class="flex">
+        {
+            Object.entries(links).map(([name, href]) => (
+                <NavbarLink href={href}>{name}</NavbarLink>
+            ))
+        }
+    </div>
+</nav>
