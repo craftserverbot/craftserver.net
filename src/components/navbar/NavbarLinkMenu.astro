@@ -36,9 +36,15 @@ const { links } = Astro.props;
                 ".component-underline"
             )!;
 
+            let immediateSlide = true;
+
             linkContainer.addEventListener("mousemove", () => {
                 for (const link of links) {
                     if (link.matches(":hover")) {
+                        if (immediateSlide) {
+                            underline.style.transitionProperty = "opacity";
+                            immediateSlide = false;
+                        }
                         underline.style.width = `${link.clientWidth}px`;
                         underline.style.left = `${link.offsetLeft}px`;
                         underline.style.opacity = "1";
@@ -52,8 +58,8 @@ const { links } = Astro.props;
             });
 
             linkContainer.addEventListener("mouseleave", () => {
-                underline.style.transitionProperty = "opacity";
                 underline.style.opacity = "0";
+                immediateSlide = true;
             });
         }
     }
