@@ -2,7 +2,7 @@
 import logo from "../assets/logo.png";
 
 import { Image } from "@astrojs/image/components";
-import NavbarLink from "./NavbarLink.astro";
+import NavbarLinkMenu from "./navbar/NavbarLinkMenu.astro";
 
 export interface Props {
     links: Record<string, string>;
@@ -22,11 +22,5 @@ const { links } = Astro.props;
             class="rounded-[100%] hover:rounded-3xl min-w-[70px] transition-all ease-in-out cursor-pointer"
         />
     </a>
-    <div class="flex">
-        {
-            Object.entries(links).map(([name, href]) => (
-                <NavbarLink href={href}>{name}</NavbarLink>
-            ))
-        }
-    </div>
+    <NavbarLinkMenu links={links} />
 </nav>

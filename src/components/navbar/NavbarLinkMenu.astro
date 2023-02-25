@@ -1,0 +1,62 @@
+---
+import NavbarLink from "./NavbarLink.astro";
+
+export interface Props {
+    links: Record<string, string>;
+}
+
+const { links } = Astro.props;
+---
+
+<navbar-link-menu class="flex-col relative">
+    <div class="flex component-navbar-links">
+        {
+            Object.entries(links).map(([name, href]) => (
+                <NavbarLink href={href}>{name}</NavbarLink>
+            ))
+        }
+    </div>
+    <div
+        class="component-underline absolute bg-white h-1 opacity-0 ease-in-out duration-300">
+    </div>
+</navbar-link-menu>
+
+<script>
+    class NavbarLinkMenu extends HTMLElement {
+        constructor() {
+            super();
+
+            const links = this.querySelectorAll<HTMLElement>(
+                ".component-navbar-links > *"
+            );
+            const linkContainer = this.querySelector<HTMLElement>(
+                ".component-navbar-links"
+            )!;
+            const underline = this.querySelector<HTMLDivElement>(
+                ".component-underline"
+            )!;
+
+            linkContainer.addEventListener("mousemove", () => {
+                for (const link of links) {
+                    if (link.matches(":hover")) {
+                        underline.style.width = `${link.clientWidth}px`;
+                        underline.style.left = `${link.offsetLeft}px`;
+                        underline.style.opacity = "1";
+                        setTimeout(() => {
+                            underline.style.transitionProperty =
+                                "opacity, width, left";
+                        });
+                        break;
+                    }
+                }
+            });
+
+            linkContainer.addEventListener("mouseleave", () => {
+                underline.style.transitionProperty = "opacity";
+                underline.style.opacity = "0";
+            });
+        }
+    }
+
+    customElements.define("navbar-link-menu", NavbarLinkMenu);
+</script>
