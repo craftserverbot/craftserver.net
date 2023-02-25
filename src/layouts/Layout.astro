@@ -23,15 +23,18 @@ const { title } = Astro.props;
         <title>{title}</title>
     </head>
     <body class="bg-gray-600">
-        <Navbar
-            links={{
-                Home: "/",
-                About: "/",
-                Invite: INVITE_LINK,
-                "Vote on Top.gg": VOTE_LINK,
-            }}
-        />
-        <slot />
+        {/* Extra div is to fix the Safari bug with position: sticky */}
+        <div>
+            <Navbar
+                links={{
+                    Home: "/",
+                    About: "/",
+                    Invite: INVITE_LINK,
+                    "Vote on Top.gg": VOTE_LINK,
+                }}
+            />
+            <slot />
+        </div>
     </body>
 </html>
 <style is:global>
