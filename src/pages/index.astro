@@ -44,16 +44,14 @@ import { INVITE_LINK } from "../constants";
         </div>
     </div>
     <main class="flex flex-col pb-16 bg-neutral-100">
-        <h2 class="uppercase font-title text-2xl text-center m-6">
-            On-demand pings
-        </h2>
+        <h2 class="uppercase font-title text-2xl text-center m-6">Features</h2>
         <div
-            class="bg-gray-800 text-white p-4 self-center max-w-md mx-4 rounded-xl overflow-hidden min-h-[250px] relative flex items-center mb-4 shadow-lg">
+            class="bg-[hsl(222.9,6.7%,20.6%)] text-white p-4 self-center max-w-md mx-4 rounded-xl overflow-hidden min-h-[250px] relative flex items-center mb-4 shadow-lg">
             <Image
                 src={embed}
                 alt="Discord embed showing the response to the view command"
                 width={300}
-                class="absolute object-none right-0 top-1/2 -translate-y-1/2 translate-x-[125px] shadow-lg"
+                class="absolute object-none right-0 top-1/2 -translate-y-1/2 translate-x-[150px] sm:translate-x-[125px]"
             />
             <div class="w-[calc(100%-150px)] sm:w-[calc(100%-200px)] text-xl">
                 CraftServer's <strong>/view</strong> command makes it easy to get
@@ -73,7 +71,7 @@ import { INVITE_LINK } from "../constants";
                 "See how many others are playing.",
                 "Let people know what version to play on.",
             ].join(" ")}
-            class="self-center rounded-xl mb-4 shadow-lg"
+            class="self-center rounded-xl mb-4 shadow-lg max-w-xs sm:max-w-full"
         />
     </main>
 </Layout>

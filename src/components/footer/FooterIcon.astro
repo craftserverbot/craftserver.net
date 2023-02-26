@@ -1,0 +1,49 @@
+---
+import { Image } from "@astrojs/image/components";
+
+export interface Props {
+    href: string;
+    opts: {
+        alt: string;
+    } & (
+        | {
+              fontawesome: string;
+          }
+        | {
+              src: ImageMetadata;
+          }
+    );
+}
+
+const { href, opts } = Astro.props;
+// invert(31%) sepia(27%) saturate(444%) hue-rotate(176deg) brightness(93%) contrast(89%)
+---
+
+<a
+    href={href}
+    title={opts.alt}
+    class="inline-flex group py-[3px] px-2 border-2 rounded-full hover:bg-white transition-colors hover:text-slate-600">
+    {
+        "fontawesome" in opts ? (
+            <i
+                class={`${opts.fontawesome} fa-fw px-1 -mb-[1px]`}
+                title={opts.alt}
+                aria-hidden={true}
+            />
+        ) : (
+            <Image
+                class="object-scale-down h-[24px] w-[38px] group-hover:as-slate-600"
+                src={opts.src}
+                alt=""
+                aria-hidden={true}
+            />
+        )
+    }
+</a>
+<style>
+    /* slate-600 is #475569, generated via https://codepen.io/sosuke/pen/Pjoqqp */
+    .group:hover .group-hover\:as-slate-600 {
+        filter: brightness(0) saturate(100%) invert(31%) sepia(27%)
+            saturate(444%) hue-rotate(176deg) brightness(93%) contrast(89%);
+    }
+</style>

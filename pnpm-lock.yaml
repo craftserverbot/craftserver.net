@@ -3,7 +3,9 @@ lockfileVersion: 5.4
 specifiers:
   '@astrojs/image': ^0.15.1
   '@astrojs/tailwind': ^3.0.1
+  '@fontsource/pt-sans': ^4.5.11
   '@fontsource/red-hat-text': ^4.5.12
+  '@fortawesome/fontawesome-free': ^6.3.0
   astro: ^2.0.15
   prettier: ^2.8.4
   prettier-plugin-astro: ^0.8.0
@@ -14,7 +16,9 @@ specifiers:
 dependencies:
   '@astrojs/image': 0.15.1_astro@2.0.15+sharp@0.31.3
   '@astrojs/tailwind': 3.0.1_enl5tymeuxlslzmmdrwlr7zkvy
+  '@fontsource/pt-sans': 4.5.11
   '@fontsource/red-hat-text': 4.5.12
+  '@fortawesome/fontawesome-free': 6.3.0
   astro: 2.0.15
   sharp: 0.31.3
   tailwindcss: 3.2.7
@@ -595,8 +599,18 @@ packages:
     dev: false
     optional: true
 
+  /@fontsource/pt-sans/4.5.11:
+    resolution: {integrity: sha512-w0Z11/B8PYcgM67fTSgZ9poFNJ8AdnglKlcH0aMdU7bBNfiHuKvZOxwUsynWpgghToh3GS4H2TizNnmi1wSEYg==}
+    dev: false
+
   /@fontsource/red-hat-text/4.5.12:
     resolution: {integrity: sha512-404lUG4USsR9s0kmMAPmistREqXETYShCH7AhCNDe+6xEGZraaDatsbjr0zbI/4zd2Oxz/s+n3Q2miDDVsQSFA==}
+    dev: false
+
+  /@fortawesome/fontawesome-free/6.3.0:
+    resolution: {integrity: sha512-qVtd5i1Cc7cdrqnTWqTObKQHjPWAiRwjUPaXObaeNPcy7+WKxJumGBx66rfSFgK6LNpIasVKkEgW8oyf0tmPLA==}
+    engines: {node: '>=6'}
+    requiresBuild: true
     dev: false
 
   /@jridgewell/gen-mapping/0.1.1:

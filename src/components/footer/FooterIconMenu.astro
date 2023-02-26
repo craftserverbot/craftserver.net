@@ -1,0 +1,17 @@
+---
+import FooterIcon, { Props as FooterIconProps } from "./FooterIcon.astro";
+
+export interface Props {
+    icons: Record<string, FooterIconProps["opts"]>;
+}
+
+const { icons } = Astro.props;
+---
+
+<div class="flex text-2xl gap-3">
+    {
+        Object.entries(icons).map(([href, opts]) => (
+            <FooterIcon href={href} opts={opts} />
+        ))
+    }
+</div>

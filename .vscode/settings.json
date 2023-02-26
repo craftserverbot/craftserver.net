@@ -12,5 +12,8 @@
     },
     "yaml.schemas": {
         "https://json.schemastore.org/github-workflow.json": "${workspaceFolder}/.github/workflows/*.yml"
+    },
+    "[xml]": {
+        "editor.defaultFormatter": "redhat.vscode-xml"
     }
 }

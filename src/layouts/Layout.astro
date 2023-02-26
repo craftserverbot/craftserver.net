@@ -1,7 +1,13 @@
 ---
 import "@fontsource/red-hat-text";
+import "@fontsource/pt-sans";
+
+import dlist from "../assets/dlist.png";
+import topgg from "../assets/topgg.svg";
+
 import Navbar from "../components/Navbar.astro";
-import { INVITE_LINK, VOTE_LINK } from "../constants";
+import { INVITE_LINK, SUPPORT_LINK, VOTE_LINK } from "../constants";
+import Footer from "../components/Footer.astro";
 
 export interface Props {
     title: string;
@@ -29,11 +35,32 @@ const { title } = Astro.props;
                 links={{
                     Home: "/",
                     About: "/",
+                    Support: SUPPORT_LINK,
                     Invite: INVITE_LINK,
                     "Vote on Top.gg": VOTE_LINK,
                 }}
             />
             <slot />
+            <Footer
+                icons={{
+                    "https://github.com/craftserverbot": {
+                        fontawesome: "fa-brands fa-github",
+                        alt: "View our Github repositories",
+                    },
+                    SUPPORT_LINK: {
+                        fontawesome: "fa-brands fa-discord",
+                        alt: "Join our Discord support server",
+                    },
+                    "https://discordlist.gg/bot/1044791133416464384": {
+                        src: dlist,
+                        alt: "View bot on DiscordList",
+                    },
+                    "https://top.gg/bot/1044791133416464384": {
+                        src: topgg,
+                        alt: "View bot on Top.gg",
+                    },
+                }}
+            />
         </div>
     </body>
 </html>
@@ -54,3 +81,8 @@ const { title } = Astro.props;
         margin: 0;
     }
 </style>
+<script>
+    import "@fortawesome/fontawesome-free/js/brands.js";
+    import "@fortawesome/fontawesome-free/js/solid.js";
+    import "@fortawesome/fontawesome-free/js/fontawesome.js";
+</script>
