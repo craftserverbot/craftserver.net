@@ -5,12 +5,12 @@ import explaination from "../assets/CraftServerExplanation.png";
 import Layout from "../layouts/Layout.astro";
 import { Image } from "@astrojs/image/components";
 import { INVITE_LINK } from "../constants";
+import Hero from "../components/Hero.astro";
 ---
 
 <Layout title="CraftServer Discord Bot">
-    <div class="text-white flex flex-col">
-        <div
-            class="bg-gradient-to-b from-gray-600 to-gray-700 pt-4 pb-8 flex flex-col gap-6 lg:gap-8 justify-center">
+    <div class="text-white">
+        <Hero background="primary">
             {/* Title and bot tag */}
             <h1 class="flex justify-center gap-2 lg:gap-4">
                 <span class="text-4xl lg:text-5xl font-title">CraftServer</span>
@@ -41,12 +41,12 @@ import { INVITE_LINK } from "../constants";
                 class="self-center bg-white text-black hover:bg-blue-100 shadow font-title p-3 rounded-lg transition-colors"
                 >Add to your server</a
             >
-        </div>
+        </Hero>
     </div>
-    <main class="flex flex-col pb-16 bg-neutral-100">
+    <main class="flex flex-col pb-16 bg-secondary">
         <h2 class="uppercase font-title text-2xl text-center m-6">Features</h2>
         <div
-            class="bg-[hsl(222.9,6.7%,20.6%)] text-white p-4 self-center max-w-md mx-4 rounded-xl overflow-hidden min-h-[250px] relative flex items-center mb-4 shadow-lg">
+            class="bg-discord text-white p-4 self-center max-w-md mx-4 rounded-xl overflow-hidden min-h-[250px] relative flex items-center mb-4 shadow-lg">
             <Image
                 src={embed}
                 alt="Discord embed showing the response to the view command"

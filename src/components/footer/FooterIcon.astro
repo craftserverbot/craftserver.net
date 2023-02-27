@@ -16,13 +16,12 @@ export interface Props {
 }
 
 const { href, opts } = Astro.props;
-// invert(31%) sepia(27%) saturate(444%) hue-rotate(176deg) brightness(93%) contrast(89%)
 ---
 
 <a
     href={href}
     title={opts.alt}
-    class="inline-flex group py-[3px] px-2 border-2 rounded-full hover:bg-white transition-colors hover:text-slate-600">
+    class="inline-flex group py-1.5 px-2 border-2 rounded-full hover:bg-white transition-colors hover:text-primary">
     {
         "fontawesome" in opts ? (
             <i
@@ -41,9 +40,9 @@ const { href, opts } = Astro.props;
     }
 </a>
 <style>
-    /* slate-600 is #475569, generated via https://codepen.io/sosuke/pen/Pjoqqp */
+    /* primary is #1f2937, generated via https://codepen.io/sosuke/pen/Pjoqqp */
     .group:hover .group-hover\:as-slate-600 {
-        filter: brightness(0) saturate(100%) invert(31%) sepia(27%)
-            saturate(444%) hue-rotate(176deg) brightness(93%) contrast(89%);
+        filter: brightness(0) saturate(100%) invert(14%) sepia(10%)
+            saturate(1760%) hue-rotate(176deg) brightness(96%) contrast(93%);
     }
 </style>
