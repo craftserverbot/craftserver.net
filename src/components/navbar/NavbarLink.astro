@@ -6,6 +6,6 @@ export interface Props {
 const { href } = Astro.props;
 ---
 
-<a class="text-xl p-3" href={href}>
+<a class="text-xl p-3 max-md:py-4" href={href}>
     <slot />
 </a>
