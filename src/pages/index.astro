@@ -6,6 +6,7 @@ import Layout from "../layouts/Layout.astro";
 import { Image } from "@astrojs/image/components";
 import { INVITE_LINK } from "../constants";
 import Hero from "../components/Hero.astro";
+import Highlight from "../components/Highlight.astro";
 ---
 
 <Layout title="CraftServer Discord Bot">
@@ -26,13 +27,13 @@ import Hero from "../components/Hero.astro";
                 <div class="bg-green-600 pl-2 lg:pl-3 self-stretch"></div>
                 <div class="p-4 pl-5 sm:leading-snug">
                     View live information about your favorite
-                    <span class="bg-green-600 text-white rounded px-1 italic">
+                    <Highlight class="bg-green-600">
                         Minecraft:&nbsp;Java&nbsp;Edition
-                    </span>
+                    </Highlight>
                     servers, right from
-                    <span class="bg-gray-800 text-white rounded px-1 italic">
+                    <Highlight class="bg-discord">
                         Discord.
-                    </span>
+                    </Highlight>
                 </div>
             </h2>
             {/* Button links */}
