@@ -8,8 +8,8 @@ export interface Props {
 const { links } = Astro.props;
 ---
 
-<navbar-link-menu class="flex-col relative">
-    <div class="flex component-navbar-links">
+<navbar-link-menu class="relative max-md:hidden">
+    <div class="flex max-md:flex-col navbar-link-menu-links">
         {
             Object.entries(links).map(([name, href]) => (
                 <NavbarLink href={href}>{name}</NavbarLink>
@@ -17,7 +17,7 @@ const { links } = Astro.props;
         }
     </div>
     <div
-        class="component-underline absolute bg-white h-1 opacity-0 ease-in-out duration-300">
+        class="navbar-link-menu-underline absolute bg-white h-1 opacity-0 ease-in-out duration-300 hidden">
     </div>
 </navbar-link-menu>
 
@@ -27,13 +27,13 @@ const { links } = Astro.props;
             super();
 
             const links = this.querySelectorAll<HTMLElement>(
-                ".component-navbar-links > *"
+                ".navbar-link-menu-links > *"
             );
             const linkContainer = this.querySelector<HTMLElement>(
-                ".component-navbar-links"
+                ".navbar-link-menu-links"
             )!;
             const underline = this.querySelector<HTMLDivElement>(
-                ".component-underline"
+                ".navbar-link-menu-underline"
             )!;
 
             let immediateSlide = true;
