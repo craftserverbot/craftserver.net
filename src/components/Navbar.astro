@@ -43,9 +43,23 @@ const { links } = Astro.props;
             const menuButton =
                 this.querySelector<HTMLElement>(".navbar-toggle")!;
 
-            menuButton.addEventListener("click", () => {
-                linkMenu.classList.toggle("max-md:hidden");
-            });
+            let HIDDEN = "max-md:hidden";
+
+            const toggle = () => {
+                if (linkMenu.classList.contains(HIDDEN)) {
+                    linkMenu.classList.remove(HIDDEN);
+                    window.scrollBy({
+                        top: linkMenu.offsetHeight,
+                    });
+                } else {
+                    window.scrollBy({
+                        top: -linkMenu.offsetHeight,
+                    });
+                    linkMenu.classList.add(HIDDEN);
+                }
+            };
+            toggle();
+            menuButton.addEventListener("click", toggle);
         }
     }
 
