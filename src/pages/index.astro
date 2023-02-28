@@ -8,6 +8,7 @@ import { INVITE_LINK } from "../constants";
 import Hero from "../components/Hero.astro";
 import Highlight from "../components/Highlight.astro";
 import Embed from "../components/Embed.astro";
+import LinkButton from "../components/LinkButton.astro";
 ---
 
 <Layout title="CraftServer Discord Bot">
@@ -32,11 +33,12 @@ import Embed from "../components/Embed.astro";
                 <Highlight class="bg-discord text-white">Discord.</Highlight>
             </Embed>
             {/* Button links */}
-            <a
-                href={INVITE_LINK}
-                class="self-center bg-neutral-100 text-black border-2 border-transparent hover:border-gradient shadow font-title p-3 rounded-lg transition-colors">
-                Add to your server
-            </a>
+            <div class="flex gap-4 self-center">
+                <LinkButton href={INVITE_LINK} primary>
+                    Add to your server
+                </LinkButton>
+                <LinkButton href={INVITE_LINK}>Get support</LinkButton>
+            </div>
         </Hero>
     </div>
     <main class="flex flex-col pb-16 bg-secondary">

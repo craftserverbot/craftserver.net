@@ -1,0 +1,18 @@
+---
+export interface Props {
+    href: string;
+    primary?: boolean;
+}
+
+const { href, primary = false } = Astro.props;
+---
+
+<a
+    href={href}
+    class={`self-center relative ${
+        primary
+            ? "bg-neutral-100 hover:bg-neutral-300 text-black"
+            : "hover:bg-neutral-100 hover:text-black"
+    }  font-title rounded-lg group border-2 border-neutral-100 transition-colors p-3`}>
+    <slot />
+</a>
