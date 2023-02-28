@@ -1,8 +1,11 @@
----
-import wave from "../assets/wave.html?raw";
----
-
 <div class={`flex flex-col pt-4 pb-8 gap-6 lg:gap-8 justify-center bg-primary`}>
     <slot />
 </div>
-<div class="fill-primary bg-secondary" set:html={wave} />
+<div class="bg-secondary wave w-full h-[10vw] mt-10"></div>
+
+<style>
+    .wave {
+        background-image: url("/wave.svg");
+        background-size: 100% 100%;
+    }
+</style>
