@@ -4,7 +4,7 @@ import explaination from "../assets/CraftServerExplanation.png";
 
 import Layout from "../layouts/Layout.astro";
 import { Image } from "@astrojs/image/components";
-import { INVITE_LINK } from "../constants";
+import { INVITE_LINK, SUPPORT_LINK } from "../constants";
 import Hero from "../components/Hero.astro";
 import Highlight from "../components/Highlight.astro";
 import Embed from "../components/Embed.astro";
@@ -37,7 +37,7 @@ import LinkButton from "../components/LinkButton.astro";
                 <LinkButton href={INVITE_LINK} primary>
                     Add to your server
                 </LinkButton>
-                <LinkButton href={INVITE_LINK}>Get support</LinkButton>
+                <LinkButton href={SUPPORT_LINK}>Get support</LinkButton>
             </div>
         </Hero>
     </div>
