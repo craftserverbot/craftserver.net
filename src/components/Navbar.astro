@@ -3,6 +3,7 @@ import logo from "../assets/logo.png";
 
 import { Image } from "@astrojs/image/components";
 import NavbarLinkMenu from "./navbar/NavbarLinkMenu.astro";
+import NavbarHamburger from "./navbar/NavbarHamburger.astro";
 
 export interface Props {
     links: Record<string, string>;
@@ -28,7 +29,7 @@ const { links } = Astro.props;
             type="button"
             class="navbar-toggle cursor-pointer md:hidden"
             title="Open navigation">
-            <i class="fa-solid fa-bars text-3xl" aria-hidden></i>
+            <NavbarHamburger />
         </button>
     </div>
     <NavbarLinkMenu links={links} />
@@ -42,6 +43,8 @@ const { links } = Astro.props;
                 this.querySelector<HTMLElement>("navbar-link-menu")!;
             const menuButton =
                 this.querySelector<HTMLElement>(".navbar-toggle")!;
+            const hamburgerIcon =
+                this.querySelector<HTMLElement>(".navbar-hamburger")!;
 
             let HIDDEN = "max-md:hidden";
 
@@ -51,11 +54,15 @@ const { links } = Astro.props;
                     window.scrollBy({
                         top: linkMenu.offsetHeight,
                     });
+                    hamburgerIcon.classList.add("navbar-hamburger-active");
+                    menuButton.setAttribute("title", "Close navigation");
                 } else {
                     window.scrollBy({
                         top: -linkMenu.offsetHeight,
                     });
                     linkMenu.classList.add(HIDDEN);
+                    hamburgerIcon.classList.remove("navbar-hamburger-active");
+                    menuButton.setAttribute("title", "Open navigation");
                 }
             };
             toggle();

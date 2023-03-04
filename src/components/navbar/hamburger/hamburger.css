@@ -1,0 +1,11 @@
+.navbar-hamburger-active .hamburger-row:nth-child(1) {
+    transform: translateX(calc(100% / 3)) rotate(45deg) translateY(14.5px) ;
+}
+
+.navbar-hamburger-active .hamburger-row:nth-child(3) {
+    transform: translateX(calc(100% / 3)) rotate(-45deg) translateY(-14.5px);
+}
+
+.navbar-hamburger-active .hamburger-row:nth-child(2) {
+    width: 0;
+}
