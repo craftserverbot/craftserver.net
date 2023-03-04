@@ -49,21 +49,26 @@ const { links } = Astro.props;
             let HIDDEN = "max-md:hidden";
 
             const toggle = () => {
-                if (linkMenu.classList.contains(HIDDEN)) {
+                const isHidden = linkMenu.classList.contains(HIDDEN);
+
+                if (isHidden) {
                     linkMenu.classList.remove(HIDDEN);
                     window.scrollBy({
                         top: linkMenu.offsetHeight,
                     });
-                    hamburgerIcon.classList.add("navbar-hamburger-active");
                     menuButton.setAttribute("title", "Close navigation");
                 } else {
                     window.scrollBy({
                         top: -linkMenu.offsetHeight,
                     });
                     linkMenu.classList.add(HIDDEN);
-                    hamburgerIcon.classList.remove("navbar-hamburger-active");
                     menuButton.setAttribute("title", "Open navigation");
                 }
+
+                hamburgerIcon.classList.toggle(
+                    "navbar-hamburger-active",
+                    isHidden
+                );
             };
             toggle();
             menuButton.addEventListener("click", toggle);
