@@ -1,15 +1,14 @@
 ---
-import explaination from "../assets/CraftServerExplanation.png";
 import viewCommand from "../assets/view-command.png";
 
 import Layout from "../layouts/Layout.astro";
-import { Picture } from "@astrojs/image/components";
 import { INVITE_LINK, SUPPORT_LINK } from "../constants";
 import Hero from "../components/Hero.astro";
 import Highlight from "../components/Highlight.astro";
 import Embed from "../components/Embed.astro";
 import LinkButton from "../components/LinkButton.astro";
 import Card from "../components/Card.astro";
+import { Image } from "astro-eleventy-img";
 ---
 
 <Layout title="CraftServer Discord Bot">
@@ -56,11 +55,10 @@ import Card from "../components/Card.astro";
         <h2 class="uppercase font-title text-2xl text-center m-6">
             Information-rich
         </h2>
-        <div class="self-center rounded-xl mb-4 shadow-lg overflow-hidden">
-            <Picture
-                src={explaination}
-                widths={[640, 512, 320]}
-                sizes="(min-width: 768px) 640px, (min-width: 640px) 512px, 320px"
+        <div
+            class="self-center rounded-xl mb-4 shadow-lg overflow-hidden max-w-sm sm:max-w-md md:max-w-full">
+            <Image
+                src="src/assets/CraftServerExplanation.png"
                 alt={[
                     "View info about your server without starting up Minecraft.",
                     "Easily check if your server is online.",

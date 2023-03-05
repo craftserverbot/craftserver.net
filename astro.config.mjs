@@ -10,4 +10,9 @@ import image from "@astrojs/image";
 export default defineConfig({
     integrations: [tailwind(), image()],
     site: "https://craftserver.net",
+    vite: {
+        ssr: {
+            external: ["@11ty/eleventy-img"],
+        },
+    },
 });
