@@ -1,9 +1,9 @@
 ---
-import embed from "../assets/CraftServerEmbed.png";
 import explaination from "../assets/CraftServerExplanation.png";
+import viewCommand from "../assets/view-command.png";
 
 import Layout from "../layouts/Layout.astro";
-import { Image } from "@astrojs/image/components";
+import { Picture } from "@astrojs/image/components";
 import { INVITE_LINK, SUPPORT_LINK } from "../constants";
 import Hero from "../components/Hero.astro";
 import Highlight from "../components/Highlight.astro";
@@ -45,13 +45,9 @@ import Card from "../components/Card.astro";
     <main class="flex flex-col pb-16 bg-secondary">
         <h2 class="uppercase font-title text-2xl text-center m-6">Features</h2>
         <div class="flex gap-4 justify-center flex-wrap">
-            <Card>
-                <Image
-                    slot="image"
-                    src={embed}
-                    alt="Discord embed showing the response to the view command"
-                    width={300}
-                />
+            <Card
+                image={viewCommand}
+                imageAlt="Illustration of the view command">
                 CraftServer's <strong>/view</strong> command makes it easy to get
                 instant information about a server's online status, how many people
                 are playing, and more.
@@ -60,16 +56,18 @@ import Card from "../components/Card.astro";
         <h2 class="uppercase font-title text-2xl text-center m-6">
             Information-rich
         </h2>
-        <Image
-            src={explaination}
-            width={512}
-            alt={[
-                "View info about your server without starting up Minecraft.",
-                "Easily check if your server is online.",
-                "See how many others are playing.",
-                "Let people know what version to play on.",
-            ].join(" ")}
-            class="self-center rounded-xl mb-4 shadow-lg max-w-xs sm:max-w-full"
-        />
+        <div class="self-center rounded-xl mb-4 shadow-lg overflow-hidden">
+            <Picture
+                src={explaination}
+                widths={[640, 512, 320]}
+                sizes="(min-width: 768px) 640px, (min-width: 640px) 512px, 320px"
+                alt={[
+                    "View info about your server without starting up Minecraft.",
+                    "Easily check if your server is online.",
+                    "See how many others are playing.",
+                    "Let people know what version to play on.",
+                ].join(" ")}
+            />
+        </div>
     </main>
 </Layout>

@@ -1,10 +1,24 @@
+---
+import { Picture } from "@astrojs/image/components";
+
+export interface Props {
+    image: ImageMetadata;
+    imageAlt: string;
+}
+
+const { image, imageAlt } = Astro.props;
+---
+
 <div
     class="bg-discord text-white p-4 self-center max-w-md mx-4 rounded-xl overflow-hidden min-h-[250px] relative flex items-center mb-4 shadow-lg">
-    <div
-        class="absolute object-none right-0 top-1/2 -translate-y-1/2 translate-x-[150px] sm:translate-x-[125px]">
-        <slot name="image" />
-    </div>
     <div class="w-[calc(100%-150px)] sm:w-[calc(100%-200px)] text-xl">
         <slot />
     </div>
+    <Picture
+        src={image}
+        alt={imageAlt}
+        sizes="(min-width: 640px) 200px, 150px"
+        widths={[200, 150]}
+        class="object-none"
+    />
 </div>
