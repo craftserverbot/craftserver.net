@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@11ty/eleventy-img': '2'
+  '@11ty/eleventy-img': 2.x
   '@astrojs/image': ^0.15.1
   '@astrojs/tailwind': ^3.0.1
   '@fontsource/pt-sans': ^4.5.11
