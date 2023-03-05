@@ -9,6 +9,7 @@ import Hero from "../components/Hero.astro";
 import Highlight from "../components/Highlight.astro";
 import Embed from "../components/Embed.astro";
 import LinkButton from "../components/LinkButton.astro";
+import Card from "../components/Card.astro";
 ---
 
 <Layout title="CraftServer Discord Bot">
@@ -43,19 +44,18 @@ import LinkButton from "../components/LinkButton.astro";
     </div>
     <main class="flex flex-col pb-16 bg-secondary">
         <h2 class="uppercase font-title text-2xl text-center m-6">Features</h2>
-        <div
-            class="bg-discord text-white p-4 self-center max-w-md mx-4 rounded-xl overflow-hidden min-h-[250px] relative flex items-center mb-4 shadow-lg">
-            <Image
-                src={embed}
-                alt="Discord embed showing the response to the view command"
-                width={300}
-                class="absolute object-none right-0 top-1/2 -translate-y-1/2 translate-x-[150px] sm:translate-x-[125px]"
-            />
-            <div class="w-[calc(100%-150px)] sm:w-[calc(100%-200px)] text-xl">
+        <div class="flex gap-4 justify-center flex-wrap">
+            <Card>
+                <Image
+                    slot="image"
+                    src={embed}
+                    alt="Discord embed showing the response to the view command"
+                    width={300}
+                />
                 CraftServer's <strong>/view</strong> command makes it easy to get
                 instant information about a server's online status, how many people
                 are playing, and more.
-            </div>
+            </Card>
         </div>
         <h2 class="uppercase font-title text-2xl text-center m-6">
             Information-rich
