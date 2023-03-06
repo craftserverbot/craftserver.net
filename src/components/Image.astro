@@ -1,0 +1,49 @@
+---
+import { Image } from "@astrojs/image/components";
+import type { Props as ImageProps } from "@astrojs/image/components/Image.astro";
+import { getPlaiceholder } from "plaiceholder";
+import * as path from "path";
+import { cwd } from "process";
+
+// image src must be imported with ?src suffix
+// e.g `import src from "./image.png?src";`
+export type Props = Omit<ImageProps, "onload" | "src"> & {
+    previewQuality?: number;
+    src: ImageMetadata;
+};
+const props = Astro.props;
+const { src } = props.src;
+
+// turn the src into a file path for the plaiceholder module
+// the path is different during dev mode and prod mode
+const devPath = /^[\/\\]?@astroimage(.+)/.exec(src);
+let assetBase: string;
+let assetPath: string;
+if (devPath) {
+    assetBase = ".";
+    assetPath = "/" + path.relative(cwd(), devPath[1]!);
+} else {
+    assetBase = "./dist";
+    assetPath = src;
+}
+
+const { base64 } = await getPlaiceholder(assetPath, {
+    size: props.previewQuality ?? 15,
+    dir: assetBase,
+    removeAlpha: false,
+});
+
+delete props.previewQuality;
+---
+
+<figure class="relative overflow-hidden">
+    <Image
+        {...props as any}
+        onload="this.parentNode.querySelector('.remove').remove()"
+    />
+    <img
+        aria-hidden
+        src={base64}
+        class="absolute h-full width-full inset-0 remove blur-lg"
+    />
+</figure>

@@ -1,5 +1,5 @@
 ---
-import { Picture } from "@astrojs/image/components";
+import Image from "./Image.astro";
 
 export interface Props {
     image: ImageMetadata;
@@ -14,11 +14,5 @@ const { image, imageAlt } = Astro.props;
     <div class="w-[calc(100%-150px)] sm:w-[calc(100%-200px)]">
         <slot />
     </div>
-    <Picture
-        src={image}
-        alt={imageAlt}
-        sizes="(min-width: 640px) 200px, 150px"
-        widths={[200, 150]}
-        class="object-none"
-    />
+    <Image src={image} alt={imageAlt} class="w-[150px] sm:w-[200px]" />
 </div>

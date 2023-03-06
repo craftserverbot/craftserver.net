@@ -1,6 +1,7 @@
 ---
 import viewCommand from "../assets/view-command.png";
 import statusFeed from "../assets/status-feed.png";
+import explanation from "../assets/explanation.png";
 
 import Layout from "../layouts/Layout.astro";
 import { INVITE_LINK, SUPPORT_LINK } from "../constants";
@@ -9,8 +10,8 @@ import Highlight from "../components/Highlight.astro";
 import Embed from "../components/Embed.astro";
 import LinkButton from "../components/LinkButton.astro";
 import Card from "../components/Card.astro";
-import { Image } from "astro-eleventy-img";
 import Header from "../components/Header.astro";
+import Image from "../components/Image.astro";
 ---
 
 <Layout
@@ -65,7 +66,8 @@ import Header from "../components/Header.astro";
         <div
             class="self-center rounded-xl mb-4 shadow-lg overflow-hidden max-w-sm sm:max-w-md md:max-w-full">
             <Image
-                src="src/assets/CraftServerExplanation.png"
+                src={explanation}
+                previewQuality={25}
                 alt={[
                     "View info about your server without starting up Minecraft.",
                     "Easily check if your server is online.",
