@@ -34,7 +34,8 @@ const { title, description } = Astro.props;
         <meta name="og:description" content={description} />
         <meta name="og:type" content="website" />
         <meta name="og:url" content={Astro.url.toString()} />
-        <meta name="og:image" content="/icon.svg" />
+        <meta name="og:image" content="/icon-512.png" />
+        <meta name="og:image:type" content="image/png" />
     </head>
     <body class="bg-primary text-white">
         {/* Extra div is to fix the Safari bug with position: sticky */}
