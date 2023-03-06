@@ -11,8 +11,8 @@ const { image, imageAlt } = Astro.props;
 
 <div
     class="bg-discord text-white p-4 self-center h-24 w-[30rem] mx-4 rounded-xl overflow-hidden min-h-[250px] relative flex items-center mb-4 shadow-lg">
-    <div class="w-[calc(100%-150px)] sm:w-[calc(100%-200px)]">
+    <p class="w-[calc(100%-150px)] sm:w-[calc(100%-200px)]">
         <slot />
-    </div>
+    </p>
     <Image src={image} alt={imageAlt} class="w-[150px] sm:w-[200px]" />
 </div>

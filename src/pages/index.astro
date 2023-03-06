@@ -12,6 +12,7 @@ import LinkButton from "../components/LinkButton.astro";
 import Card from "../components/Card.astro";
 import Header from "../components/Header.astro";
 import Image from "../components/Image.astro";
+import Subheader from "../components/Subheader.astro";
 ---
 
 <Layout
@@ -48,6 +49,11 @@ import Image from "../components/Image.astro";
     </div>
     <main class="flex flex-col py-16 bg-secondary">
         <Header>Know what's going on in your favorite servers</Header>
+        <Subheader>
+            CraftServer is the Discord bot that's always ready to give you
+            accurate, up-to-date information about any public Minecraft server,
+            without compromising speed.
+        </Subheader>
         <div class="flex gap-4 justify-center flex-wrap text-lg mb-24">
             <Card
                 image={viewCommand}
@@ -62,7 +68,15 @@ import Image from "../components/Image.astro";
                 with the latest info, and checking them is as simple as opening Discord.
             </Card>
         </div>
-        <Header>See everything from Minecraft, right in Discord</Header>
+        <Header>
+            View everything from Minecraft.<br />
+            Right in Discord.
+        </Header>
+        <Subheader>
+            Spend less time waiting for Minecraft to start up just to check up
+            on a server. Send a CraftServer command to immediately view
+            everything accessible from the Minecraft multiplayer screen.
+        </Subheader>
         <div
             class="self-center rounded-xl mb-4 shadow-lg overflow-hidden max-w-sm sm:max-w-md md:max-w-full">
             <Image
