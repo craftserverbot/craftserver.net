@@ -10,9 +10,13 @@ import { cwd } from "process";
 export type Props = Omit<ImageProps, "onload" | "src"> & {
     previewQuality?: number;
     src: ImageMetadata;
+    absolute?: boolean;
 };
 const props = Astro.props;
 const { src } = props.src;
+const { absolute = false, previewQuality = 15 } = props;
+delete props.absolute;
+delete props.previewQuality;
 
 // turn the src into a file path for the plaiceholder module
 // the path is different during dev mode and prod mode
@@ -28,15 +32,16 @@ if (devPath) {
 }
 
 const { base64 } = await getPlaiceholder(assetPath, {
-    size: props.previewQuality ?? 15,
+    size: previewQuality,
     dir: assetBase,
     removeAlpha: false,
 });
-
-delete props.previewQuality;
 ---
 
-<figure class={`relative overflow-hidden ${props.class}`}>
+<figure
+    class={`${absolute ? "absolute" : "relative"} overflow-hidden ${
+        props.class
+    }`}>
     <Image
         {...props as any}
         class={undefined}

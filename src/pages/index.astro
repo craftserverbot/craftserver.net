@@ -2,6 +2,7 @@
 import viewCommand from "../assets/view-command.png";
 import statusFeed from "../assets/status-feed.png";
 import explanation from "../assets/explanation.png";
+import wavyArrow from "../assets/wavy-arrow.svg";
 
 import Layout from "../layouts/Layout.astro";
 import { INVITE_LINK, SUPPORT_LINK } from "../constants";
@@ -17,7 +18,7 @@ import Subheader from "../components/Subheader.astro";
 
 <Layout
     title="CraftServer Discord Bot"
-    description="View live information about your favorite Minecraft: Java Edition servers, right from Discord.">
+    description="View live information about your favorite Minecraft: Java Edition servers, directly from Discord.">
     <div class="text-white">
         <Hero background="primary">
             {/* Title and bot tag */}
@@ -35,7 +36,7 @@ import Subheader from "../components/Subheader.astro";
                 <Highlight class="bg-green-600 text-white">
                     Minecraft:&nbsp;Java&nbsp;Edition
                 </Highlight>
-                servers, right from
+                servers, directly from
                 <Highlight class="bg-discord text-white">Discord.</Highlight>
             </Embed>
             {/* Button links */}
@@ -70,12 +71,12 @@ import Subheader from "../components/Subheader.astro";
         </div>
         <Header>
             View everything from Minecraft.<br />
-            Right in Discord.
+            Without leaving Discord.
         </Header>
         <Subheader>
-            Spend less time waiting for Minecraft to start up just to check up
-            on a server. Send a CraftServer command to immediately view
-            everything accessible from the Minecraft multiplayer screen.
+            Spend less time waiting for Minecraft to start just to check on a
+            server. Send a CraftServer command to immediately view everything
+            accessible from the Minecraft multiplayer screen.
         </Subheader>
         <div
             class="self-center rounded-xl mb-4 shadow-lg overflow-hidden max-w-sm sm:max-w-md md:max-w-full">
@@ -89,6 +90,32 @@ import Subheader from "../components/Subheader.astro";
                     "Let people know what version to play on.",
                 ].join(" ")}
             />
+        </div>
+        <div
+            class="flex max-md:flex-col justify-around flex-grow m-20 max-sm:mx-10">
+            <Subheader left>
+                CraftServer uses Lunar Client's server database to improve your
+                status results. When viewing compatible servers, see pretty,
+                human readable names instead of addresses made for computers.
+            </Subheader>
+            <div
+                class="flex flex-col text-2xl self-start text-black relative mx-10">
+                <div
+                    class="font-mono rounded-lg bg-white p-4 border-4 border-primary text-xl mr-5">
+                    play.craftserver.net
+                </div>
+                <Image
+                    src={wavyArrow}
+                    previewQuality={25}
+                    alt="Arrow"
+                    absolute
+                    class="bottom-2 left-2"
+                />
+                <div
+                    class="font-medium rounded-lg bg-white p-4 border-4 border-primary self-end -translate-y-5">
+                    CraftServer SMP
+                </div>
+            </div>
         </div>
     </main>
 </Layout>
