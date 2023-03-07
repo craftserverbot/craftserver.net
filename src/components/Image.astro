@@ -36,9 +36,10 @@ const { base64 } = await getPlaiceholder(assetPath, {
 delete props.previewQuality;
 ---
 
-<figure class="relative overflow-hidden">
+<figure class={`relative overflow-hidden ${props.class}`}>
     <Image
         {...props as any}
+        class={undefined}
         onload="this.parentNode.querySelector('.remove').remove()"
     />
     <img

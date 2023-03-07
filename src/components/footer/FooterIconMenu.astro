@@ -8,7 +8,7 @@ export interface Props {
 const { icons } = Astro.props;
 ---
 
-<div class="flex text-2xl gap-3">
+<div class="flex text-2xl gap-3 pb-4">
     {
         Object.entries(icons).map(([href, opts]) => (
             <FooterIcon href={href} opts={opts} />
