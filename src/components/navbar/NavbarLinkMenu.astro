@@ -8,7 +8,7 @@ export interface Props {
 const { links } = Astro.props;
 ---
 
-<navbar-link-menu class="relative max-md:pt-2">
+<navbar-link-menu class="relative max-md:pt-2 max-md:hidden">
     <div class="flex max-md:flex-col navbar-link-menu-links">
         {
             Object.entries(links).map(([name, href]) => (
