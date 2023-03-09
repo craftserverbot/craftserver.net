@@ -14,6 +14,7 @@ import Card from "../components/Card.astro";
 import Header from "../components/Header.astro";
 import Image from "../components/Image.astro";
 import Subheader from "../components/Subheader.astro";
+import Logo from "../components/Logo.astro";
 ---
 
 <Layout
@@ -22,13 +23,9 @@ import Subheader from "../components/Subheader.astro";
     <div class="text-white">
         <Hero background="primary">
             {/* Title and bot tag */}
-            <h1 class="flex justify-center gap-2 lg:gap-4">
+            <h1 class="flex justify-center items-center gap-2 lg:gap-4">
+                <Logo />
                 <span class="text-4xl lg:text-5xl font-title">CraftServer</span>
-                <span
-                    class="bg-blue-600 px-2 py-1 text-sm lg:text-lg rounded-md lg:rounded-lg self-center translate-y-1"
-                    aria-hidden="true">
-                    BOT
-                </span>
             </h1>
             {/* Embed */}
             <Embed>
@@ -70,7 +67,7 @@ import Subheader from "../components/Subheader.astro";
             </Card>
         </div>
         <Header>
-            View everything from Minecraft.<br />
+            View everything from Minecraft,<br />
             Without leaving Discord.
         </Header>
         <Subheader>
@@ -118,7 +115,7 @@ import Subheader from "../components/Subheader.astro";
             </div>
         </div>
         <Header>
-            Connecting Discord to Minecraft.<br />
+            Connecting Discord to Minecraft:<br />
             It's never been this easy.
         </Header>
         <Subheader>

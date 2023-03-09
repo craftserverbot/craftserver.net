@@ -1,10 +1,8 @@
 ---
-import logo from "../assets/logo.png";
-
 import FooterIconMenu, {
     Props as FooterIconMenuProps,
 } from "./footer/FooterIconMenu.astro";
-import Image from "./Image.astro";
+import Logo from "./Logo.astro";
 
 export interface Props extends FooterIconMenuProps {}
 
@@ -14,13 +12,7 @@ const { icons } = Astro.props;
 <div
     class="flex flex-col gap-8 p-5 sm:p-20 text-center text-white items-center">
     <a class="flex items-center gap-3 text-xl font-semibold p-4" href="/">
-        <Image
-            src={logo}
-            alt="CraftServer logo"
-            width={70 * 2}
-            aspectRatio={1 / 1}
-            class="rounded-[100%] group-hover:rounded-3xl w-[40px] cursor-pointer"
-        />
+        <Logo />
         CraftServer
     </a>
     <FooterIconMenu icons={icons} />

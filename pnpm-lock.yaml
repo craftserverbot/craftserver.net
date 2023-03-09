@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@astrojs/image': ^0.15.1
   '@astrojs/tailwind': ^3.0.1
-  '@fontsource/pt-sans': ^4.5.11
+  '@fontsource/oxygen': ^4.5.9
   '@fontsource/red-hat-text': ^4.5.12
   '@fortawesome/fontawesome-free': ^6.3.0
   astro: ^2.0.16
@@ -17,7 +17,7 @@ specifiers:
 dependencies:
   '@astrojs/image': 0.15.1_astro@2.0.16+sharp@0.31.3
   '@astrojs/tailwind': 3.0.1_dcffs6vszochbmkyu5n7efg4ri
-  '@fontsource/pt-sans': 4.5.11
+  '@fontsource/oxygen': 4.5.9
   '@fontsource/red-hat-text': 4.5.12
   '@fortawesome/fontawesome-free': 6.3.0
   astro: 2.0.16
@@ -601,8 +601,8 @@ packages:
     dev: false
     optional: true
 
-  /@fontsource/pt-sans/4.5.11:
-    resolution: {integrity: sha512-w0Z11/B8PYcgM67fTSgZ9poFNJ8AdnglKlcH0aMdU7bBNfiHuKvZOxwUsynWpgghToh3GS4H2TizNnmi1wSEYg==}
+  /@fontsource/oxygen/4.5.9:
+    resolution: {integrity: sha512-W/Aoi61hVquFiPGi4Bp8h4KExbDUqbyEhwOhEQN5CcKdHAHwrk1aev0nwIAAu4Cv8ROHSZ1E1N6gpNnlo5vGmA==}
     dev: false
 
   /@fontsource/red-hat-text/4.5.12:

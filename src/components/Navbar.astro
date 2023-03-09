@@ -1,9 +1,7 @@
 ---
-import logo from "../assets/logo.png";
-
-import Image from "./Image.astro";
 import NavbarLinkMenu from "./navbar/NavbarLinkMenu.astro";
 import NavbarHamburger from "./navbar/NavbarHamburger.astro";
+import Logo from "./Logo.astro";
 
 export interface Props {
     links: Record<string, string>;
@@ -17,13 +15,7 @@ const { links } = Astro.props;
     class="bg-primary/80 text-white flex max-md:flex-col md:items-center justify-between p-4 w-full sticky top-0 z-20 backdrop-blur">
     <div class="flex justify-between items-center">
         <a href="/" class="group self-start">
-            <Image
-                src={logo}
-                alt="CraftServer logo"
-                width={70 * 2}
-                aspectRatio={1 / 1}
-                class="rounded-[100%] group-hover:rounded-3xl w-[70px] cursor-pointer"
-            />
+            <Logo listenForHover />
         </a>
         <button
             type="button"
