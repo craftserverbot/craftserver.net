@@ -48,7 +48,7 @@ import Subheader from "../components/Subheader.astro";
             </div>
         </Hero>
     </div>
-    <main class="flex flex-col py-20 bg-secondary" id="content">
+    <main class="flex flex-col py-24 bg-secondary" id="content">
         <Header>Know what's going on in your favorite servers</Header>
         <Subheader>
             CraftServer is the Discord bot that's always ready to give you
@@ -92,7 +92,7 @@ import Subheader from "../components/Subheader.astro";
             />
         </div>
         <div
-            class="flex max-md:flex-col justify-around flex-grow m-20 max-sm:mx-10">
+            class="flex max-md:flex-col justify-around flex-grow mt-24 mx-20 max-sm:mx-10">
             <Subheader left>
                 CraftServer uses Lunar Client's server database to improve your
                 status results. When viewing compatible servers, see pretty,
@@ -117,5 +117,17 @@ import Subheader from "../components/Subheader.astro";
                 </div>
             </div>
         </div>
+        <Header>
+            Connecting Discord to Minecraft.<br />
+            It's never been this easy.
+        </Header>
+        <Subheader>
+            CraftServer is designed to work for a variety of uses. See how it
+            could improve your Discord server, whether you're building a
+            Minecraft-related community or a chat for your friends.
+        </Subheader>
+        <LinkButton href={INVITE_LINK} primary offsetUp>
+            Add to your server
+        </LinkButton>
     </main>
 </Layout>

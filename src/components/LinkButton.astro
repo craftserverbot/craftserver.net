@@ -2,9 +2,10 @@
 export interface Props {
     href: string;
     primary?: boolean;
+    offsetUp?: boolean;
 }
 
-const { href, primary = false } = Astro.props;
+const { href, primary = false, offsetUp = false } = Astro.props;
 ---
 
 <a
@@ -13,6 +14,8 @@ const { href, primary = false } = Astro.props;
         primary
             ? "bg-neutral-100 hover:bg-neutral-300 text-black"
             : "hover:bg-neutral-100 hover:text-black"
-    }  font-title rounded-lg group border-2 border-neutral-100 transition-colors p-3`}>
+    }  font-title rounded-lg group border-2 border-neutral-100 transition-colors p-3 ${
+        offsetUp ? "-mt-16" : ""
+    }`}>
     <slot />
 </a>
