@@ -21,8 +21,10 @@ module.exports = {
                 ],
             },
             colors: {
-                primary: defaultColors.gray[800],
-                secondary: defaultColors.gray[700],
+                primary: defaultColors.gray[100],
+                secondary: defaultColors.gray[200],
+                "dark-primary": defaultColors.gray[800],
+                "dark-secondary": defaultColors.gray[700],
                 discord: "#35383f",
             },
         },
