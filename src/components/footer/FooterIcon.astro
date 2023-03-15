@@ -18,26 +18,29 @@ export interface Props {
 const { href, opts } = Astro.props;
 ---
 
-<a
-    href={href}
-    title={opts.alt}
-    class="inline-flex group py-1.5 px-2 border-2 border-neutral-100 rounded-full hover:bg-neutral-100 transition-colors hover:text-primary shrink-0">
-    {
-        "fontawesome" in opts ? (
-            <i
-                class={`${opts.fontawesome} fa-fw px-1 -mb-[1px]`}
-                title={opts.alt}
-                aria-hidden={true}
-            />
-        ) : (
-            <Image
-                class="object-scale-down h-[24px] w-[38px] group-hover:as-slate-600"
-                src={opts.src}
-                alt=""
-                aria-hidden={true}
-            />
-        )
-    }
+<a href={href} title={opts.alt} class="group relative pb-0.5 pr-0.5">
+    <div
+        class="border border-white rounded-full absolute top-0 left-0 right-0.5 bottom-0.5">
+    </div>
+    <div
+        class="flex py-1.5 px-2 border-2 border-neutral-100 rounded-full bg-primary shrink-0 translate-x-0.5 translate-y-0.5 group-hover:transform-none">
+        {
+            "fontawesome" in opts ? (
+                <i
+                    class={`${opts.fontawesome} fa-fw px-1 -translate-y-[1px]`}
+                    title={opts.alt}
+                    aria-hidden={true}
+                />
+            ) : (
+                <Image
+                    class="object-scale-down h-[24px] w-[38px]"
+                    src={opts.src}
+                    alt=""
+                    aria-hidden={true}
+                />
+            )
+        }
+    </div>
 </a>
 <style>
     /* primary is #1f2937, generated via https://codepen.io/sosuke/pen/Pjoqqp */

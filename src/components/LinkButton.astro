@@ -8,16 +8,18 @@ export interface Props {
 const { href, primary = false, offsetUp = false } = Astro.props;
 ---
 
-<a href={href} class="pb-0.5 pr-0.5 group relative self-center">
+<a
+    href={href}
+    class={`pb-0.5 pr-0.5 group relative self-center ${
+        offsetUp ? "-mt-16" : ""
+    }`}>
     <div
-        class="border border-black rounded-lg absolute top-0 left-0 right-0.5 bottom-0.5">
+        class="border border-white rounded-lg absolute top-0 left-0 right-0.5 bottom-0.5">
     </div>
     <div
         class={`translate-x-0.5 translate-y-0.5 group-hover:transform-none box-border ${
-            primary ? "bg-black text-white" : "bg-primary"
-        } font-title rounded-lg group border border-black transition p-3 ${
-            offsetUp ? "-mt-16" : ""
-        }`}>
+            primary ? "bg-white text-black" : "bg-primary"
+        } font-title rounded-lg group border border-white p-3`}>
         <slot />
     </div>
 </a>
