@@ -7,7 +7,7 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                title: ["Oxygen", "Futura", "sans-serif"],
+                title: ["Nunito", "Futura", "sans-serif"],
                 sans: ["Red Hat Text", "Arial", "sans-serif"],
                 mono: [
                     "Menlo",

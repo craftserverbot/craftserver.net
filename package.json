@@ -14,7 +14,7 @@
     "dependencies": {
         "@astrojs/image": "^0.15.1",
         "@astrojs/tailwind": "^3.0.1",
-        "@fontsource/oxygen": "^4.5.9",
+        "@fontsource/nunito": "^4.5.12",
         "@fontsource/red-hat-text": "^4.5.12",
         "@fortawesome/fontawesome-free": "^6.3.0",
         "astro": "^2.0.16",
