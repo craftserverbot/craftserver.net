@@ -10,7 +10,7 @@
         "experimentalDecorators": true,
         "resolveJsonModule": true,
         "noEmit": true,
-        "importsNotUsedAsValues": "error",
+        "verbatimModuleSyntax": true,
         // Report errors for fallthrough cases in switch statements
         "noFallthroughCasesInSwitch": true,
         // Force functions designed to override their parent class to be specified as `override`.
