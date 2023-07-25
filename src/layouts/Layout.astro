@@ -15,6 +15,7 @@ export interface Props {
 }
 
 const { title, description } = Astro.props;
+const useAnalytics = import.meta.env.PROD;
 ---
 
 <!DOCTYPE html>
@@ -22,12 +23,16 @@ const { title, description } = Astro.props;
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script
-            async
-            defer
-            src="https://analytics.umami.is/script.js"
-            data-website-id="99cb60f1-57ad-4e6e-9978-3b9afae7b22f"
-        ></script>
+        {
+            useAnalytics ? (
+                <script
+                    async
+                    src="https://connect.craftserver.net/analytics/script.js"
+                    data-website-id="13f1c518-cf03-44c7-8243-3abcb3e15d19"
+                />
+            ) : null
+        }
+
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
