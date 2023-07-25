@@ -14,7 +14,6 @@ import Card from "../components/Card.astro";
 import Header from "../components/Header.astro";
 import Image from "../components/Image.astro";
 import Subheader from "../components/Subheader.astro";
-import Logo from "../components/Logo.astro";
 ---
 
 <Layout
@@ -22,10 +21,8 @@ import Logo from "../components/Logo.astro";
     description="View live information about your favorite Minecraft: Java Edition servers, directly from Discord.">
     <div class="text-white">
         <Hero background="primary">
-            {/* Title and bot tag */}
-            <h1 class="flex justify-center items-center gap-2 lg:gap-4">
-                <Logo />
-                <span class="text-4xl lg:text-5xl font-title">CraftServer</span>
+            <h1 class="text-4xl lg:text-5xl font-title text-center">
+                CraftServer
             </h1>
             {/* Embed */}
             <Embed>
