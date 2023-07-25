@@ -1,10 +1,7 @@
 import { defineConfig } from "astro/config";
-
-// https://astro.build/config
 import tailwind from "@astrojs/tailwind";
-
-// https://astro.build/config
 import image from "@astrojs/image";
+import remarkToc from "remark-toc";
 
 // https://astro.build/config
 export default defineConfig({
@@ -19,5 +16,8 @@ export default defineConfig({
         ssr: {
             external: ["@11ty/eleventy-img"],
         },
+    },
+    markdown: {
+        remarkPlugins: [remarkToc],
     },
 });

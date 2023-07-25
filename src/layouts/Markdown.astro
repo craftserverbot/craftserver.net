@@ -1,0 +1,28 @@
+---
+import Header from "../components/Header.astro";
+import Content from "../components/Content.astro";
+import Layout from "./Layout.astro";
+import Subheader from "../components/Subheader.astro";
+
+export interface Props {
+    frontmatter: {
+        title: string;
+        description: string;
+        subtitle?: any;
+    };
+}
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={frontmatter.title} description={frontmatter.description}>
+    <Header>{frontmatter.title}</Header>
+    {
+        frontmatter.subtitle ? (
+            <Subheader class="mx-auto">{frontmatter.subtitle}</Subheader>
+        ) : null
+    }
+    <Content>
+        <slot />
+    </Content>
+</Layout>
