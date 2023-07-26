@@ -3,11 +3,10 @@ import Image from "./Image.astro";
 import logo from "../assets/logo.png";
 
 export interface Props {
-    listenForHover?: boolean;
     small?: boolean;
 }
 
-const { listenForHover = false, small = false } = Astro.props;
+const { small = false } = Astro.props;
 ---
 
 <Image
@@ -15,7 +14,5 @@ const { listenForHover = false, small = false } = Astro.props;
     alt="CraftServer logo"
     width={50 * 2}
     aspectRatio={1 / 1}
-    class={`rounded-[100%] ${listenForHover ? "group-hover:rounded-3xl" : ""} ${
-        small ? "w-[34px]" : "w-[50px]"
-    } cursor-pointer`}
+    class={`rounded-[100%] ${small ? "w-[34px]" : "w-[50px]"} cursor-pointer`}
 />
