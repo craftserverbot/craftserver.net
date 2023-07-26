@@ -17,12 +17,12 @@ By using the Services or adding them to your Discord guild, these Terms will aut
 
 You agree not to use the Services or contribute content to the Services in a way that:
 
-1. infringes on other's intellectual property rights
-2. violates any law or regulation
-3. violates the Discord Terms of Service
-4. phishes for other's private information (e.g. passwords or login codes)
-5. provides you with unauthorized access to someone's computer system
-6. negatively interferes with the experience of other users
+1. infringes on other's intellectual property rights;
+2. violates any law or regulation;
+3. violates the Discord Terms of Service;
+4. phishes for other's private information (e.g. passwords or login codes);
+5. provides you with unauthorized access to someone's computer system;
+6. negatively interferes with the experience of other users; or,
 7. copies, modifies, decompiles, reverse engineers, or otherwise attempts to obtain the source code or underlying ideas or information of the Services, any part of the Services, or our trademarks.
 
 You're not allowed to make derivative versions, such as a version in a different language. Any violation of the above is grounds for termination of your use of or access to the Services. The Services themselves, and all the trademarks, copyright, database rights, and other intellectual property rights related to them, still belong to us.
@@ -43,6 +43,10 @@ We may update our Terms from time to time. Thus, you are advised to review this 
 
 The Services are provided "as is" and we disclaim all warranties with regard to them including all implied warranties of merchantability and fitness. In no event shall we be liable for any special, direct, indirect, or consequential damages or any damages whatsoever resulting from loss of use, data, or profits, whether in an action of contract, negligence, or other tortious action, arising out of or in connection with the use or performance of the Services.
 
+## Links to other sites
+
+The Services may contain links to websites that are not operated by us. We advise you to review their Terms of Service. We have no control over and assume no responsibility for the content, terms of service, or practices of any third-party sites or services.
+
 ## Contact us
 
-If you have any questions or suggestions about these Terms of Service, do not hesitate to contact us at <bot@craftserver.net>.
+If you have any questions or suggestions about these Terms of Service, do not hesitate to contact us at <bot@craftserver.net>. You may also join our Discord support server using the links at the top and bottom of this website.
