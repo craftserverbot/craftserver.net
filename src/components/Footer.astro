@@ -5,7 +5,7 @@ import FooterIconMenu, {
 } from "./footer/FooterIconMenu.astro";
 import FooterLinkStack from "./footer/FooterLinkStack.astro";
 import Logo from "./Logo.astro";
-import { SUPPORT_LINK, VOTE_LINK } from "../constants";
+import { INVITE_LINK, SUPPORT_LINK, VOTE_LINK } from "../constants";
 import * as assert from "node:assert";
 
 const policies = (await Astro.glob("../pages/policies/*.md")).map((page) => {
@@ -38,6 +38,10 @@ const { icons } = Astro.props;
         <FooterLinkStack
             title="Resources"
             links={[
+                {
+                    title: "Add to your server",
+                    url: INVITE_LINK,
+                },
                 {
                     title: "Support server",
                     url: SUPPORT_LINK,
