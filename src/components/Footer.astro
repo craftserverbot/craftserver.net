@@ -1,6 +1,6 @@
 ---
 import FooterIconMenu, {
-    Props as FooterIconMenuProps,
+    type Props as FooterIconMenuProps,
 } from "./footer/FooterIconMenu.astro";
 import Logo from "./Logo.astro";
 
@@ -30,20 +30,3 @@ const { icons } = Astro.props;
         their respective owners.
     </span>
 </div>
-
-<!--
-<div
-    class="flex flex-col bg-primary justify-center items-center gap-6 p-5 sm:p-20 text-center text-white">
-    <span>
-        &copy; CraftServer Discord Bot 2023. All trademarks are the property of
-        their respective owners.
-    </span>
-    <span>
-        Contact:
-        <a class="underline" href="mailto:bot@craftserver.net">
-            bot@craftserver.net
-        </a>
-    </span>
-    <FooterIconMenu icons={icons} />
-</div>
- -->

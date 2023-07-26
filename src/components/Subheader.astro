@@ -2,14 +2,21 @@
 export interface Props {
     left?: boolean;
     class?: string;
+    compact?: boolean;
 }
 
-const { left = false, class: classList } = Astro.props;
+const { left = false, compact = false, class: classList } = Astro.props;
 ---
 
 <p
-    class={`max-w-sm sm:max-w-lg md:max-w-xl ${
-        left ? "text-left" : "text-center"
-    } self-center text-lg sm:text-xl text-neutral-200 pb-24 ${classList}`}>
+    class:list={[
+        "max-w-sm sm:max-w-lg md:max-w-xl",
+        left ? "text-left" : "text-center",
+        "self-center",
+        "text-lg sm:text-xl",
+        "text-neutral-200",
+        compact ? "mb-12" : "mb-24",
+        classList,
+    ]}>
     <slot />
 </p>

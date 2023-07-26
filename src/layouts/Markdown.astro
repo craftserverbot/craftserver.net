@@ -1,8 +1,8 @@
 ---
-import Header from "../components/Header.astro";
 import Content from "../components/Content.astro";
 import Layout from "./Layout.astro";
 import Subheader from "../components/Subheader.astro";
+import Title from "../components/Title.astro";
 
 export interface Props {
     frontmatter: {
@@ -13,13 +13,16 @@ export interface Props {
 }
 
 const { frontmatter } = Astro.props;
+const subtitle = frontmatter.subtitle ?? frontmatter.description;
 ---
 
 <Layout title={frontmatter.title} description={frontmatter.description}>
-    <Header>{frontmatter.title}</Header>
+    <Title>{frontmatter.title}</Title>
     {
-        frontmatter.subtitle ? (
-            <Subheader class="mx-auto">{frontmatter.subtitle}</Subheader>
+        subtitle ? (
+            <Subheader class="mx-auto" compact>
+                {subtitle}
+            </Subheader>
         ) : null
     }
     <Content>
