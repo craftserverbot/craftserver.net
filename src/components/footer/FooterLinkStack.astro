@@ -1,0 +1,25 @@
+---
+export interface Props {
+    title: string;
+    links: {
+        title: string;
+        url: string;
+    }[];
+}
+const { title, links } = Astro.props;
+---
+
+<div class="p-4">
+    <h2 class="text-muted mb-2">{title}</h2>
+    <ul class="list-none">
+        {
+            links.map(({ title, url }) => {
+                return (
+                    <li class="mb-2">
+                        <a href={url}>{title}</a>
+                    </li>
+                );
+            })
+        }
+    </ul>
+</div>

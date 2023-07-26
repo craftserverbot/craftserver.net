@@ -2,7 +2,7 @@
 title: Terms of Service
 description: Conditions for using the CraftServer services
 subtitle: "Effective: July 25, 2023"
-layout: ../layouts/Markdown.astro
+layout: /src/layouts/Markdown.astro
 ---
 
 Hello! Thank you for using CraftServer and taking the time to read these Terms of Service (the "Terms"). This document describes the conditions that govern your use of CraftServer websites, services, Discord bots, and other products (the "Services"). These Terms are an agreement between you and the developers of CraftServer ("we"/"us"). Feel free to email us with any questions you have at <bot@craftserver.net>.

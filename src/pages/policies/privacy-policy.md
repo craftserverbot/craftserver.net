@@ -2,7 +2,7 @@
 title: Privacy Policy
 description: How we handle the data you provide to us
 subtitle: "Effective: July 25, 2023"
-layout: ../layouts/Markdown.astro
+layout: /src/layouts/Markdown.astro
 ---
 
 Hello! Thank you for using CraftServer and taking the time to read our Privacy Policy. This document describes how we handle the data you provide to us (the developers of CraftServer) while using CraftServer websites, services, Discord bots, and other products (the "Services"). We take privacy seriously; feel free to email us with any questions you have at <bot@craftserver.net>.

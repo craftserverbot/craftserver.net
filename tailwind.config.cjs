@@ -23,6 +23,7 @@ module.exports = {
             colors: {
                 primary: defaultColors.gray[800],
                 secondary: defaultColors.gray[700],
+                muted: defaultColors.gray[400],
                 discord: "#35383f",
             },
         },

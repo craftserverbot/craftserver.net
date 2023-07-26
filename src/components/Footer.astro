@@ -1,32 +1,66 @@
 ---
+import { clsx as c } from "clsx";
 import FooterIconMenu, {
     type Props as FooterIconMenuProps,
 } from "./footer/FooterIconMenu.astro";
+import FooterLinkStack from "./footer/FooterLinkStack.astro";
 import Logo from "./Logo.astro";
+import { SUPPORT_LINK, VOTE_LINK } from "../constants";
+import * as assert from "node:assert";
+
+const policies = (await Astro.glob("../pages/policies/*.md")).map((page) => {
+    const url = page.url;
+    assert.ok(url);
+    return {
+        title: page.frontmatter.title,
+        url,
+    };
+});
 
 export interface Props extends FooterIconMenuProps {}
 
 const { icons } = Astro.props;
 ---
 
-<div
-    class="flex flex-col gap-8 p-5 sm:p-20 text-center text-white items-center">
-    <a class="flex items-center gap-3 text-xl font-semibold p-4" href="/">
-        <Logo small />
-        CraftServer
-    </a>
-    <FooterIconMenu icons={icons} />
-</div>
-<div
-    class="flex flex-col bg-gray-900 gap-2 p-5 text-center text-white items-center">
-    <span>
-        Contact:
-        <a class="underline" href="mailto:bot@craftserver.net">
-            bot@craftserver.net
-        </a>
-    </span>
-    <span>
-        &copy; 2023 CraftServer Discord Bot — All trademarks are the property of
-        their respective owners.
-    </span>
-</div>
+<footer>
+    <div class="flex flex-wrap py-10 mb-5 gap-4 justify-center">
+        <div
+            class={c(
+                "flex flex-col gap-6 p-4 text-center text-white",
+                "w-full items-center md:w-auto"
+            )}>
+            <a class="flex items-center gap-3 text-xl font-semibold" href="/">
+                <Logo small />
+                CraftServer
+            </a>
+            <FooterIconMenu icons={icons} />
+        </div>
+        <FooterLinkStack
+            title="Resources"
+            links={[
+                {
+                    title: "Support server",
+                    url: SUPPORT_LINK,
+                },
+                {
+                    title: "Vote on Top.gg",
+                    url: VOTE_LINK,
+                },
+            ]}
+        />
+        <FooterLinkStack title="Policies" links={policies} />
+    </div>
+    <div
+        class="flex flex-col bg-gray-900 gap-2 p-5 text-center text-white items-center">
+        <p>
+            Contact:
+            <a class="underline" href="mailto:bot@craftserver.net">
+                bot@craftserver.net
+            </a>
+        </p>
+        <p>
+            &copy; 2023 CraftServer Discord Bot — All trademarks are the
+            property of their respective owners.
+        </p>
+    </div>
+</footer>
