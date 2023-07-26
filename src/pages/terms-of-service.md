@@ -33,7 +33,7 @@ We are committed to ensuring that the Services are as useful and efficient as po
 
 ## On the subject of your security
 
-We store and process personal data that you have provided to us (your "Data"), to provide the Services. It’s your responsibility to keep your devices with access to the Services secure. If your Discord account is compromised, attackers may be able to access, view, and modify your Data.
+We store and process personal data that you have provided to us (your "Data") to provide the Services. It’s your responsibility to keep your devices with access to the Services secure. If your Discord account is compromised, attackers may be able to access, view, and modify your Data.
 
 ## Changes to the Terms
 
@@ -41,7 +41,7 @@ We may update our Terms from time to time. Thus, you are advised to review this 
 
 ## Our liability
 
-The Services are provided "as is" and we disclaim all warranties with regard to them including all implied warranties of merchantability and fitness. In no event shall we be liable for any special, direct, indirect, or consequential damages or any damages whatsoever resulting from loss of use, data, or profits, whether in an action of contract, negligence or other tortious action, arising out of or in connection with the use or performance of the Services.
+The Services are provided "as is" and we disclaim all warranties with regard to them including all implied warranties of merchantability and fitness. In no event shall we be liable for any special, direct, indirect, or consequential damages or any damages whatsoever resulting from loss of use, data, or profits, whether in an action of contract, negligence, or other tortious action, arising out of or in connection with the use or performance of the Services.
 
 ## Contact us
 
