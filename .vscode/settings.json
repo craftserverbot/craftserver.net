@@ -15,5 +15,6 @@
     },
     "[xml]": {
         "editor.defaultFormatter": "redhat.vscode-xml"
-    }
+    },
+    "github.copilot.inlineSuggest.enable": true
 }
