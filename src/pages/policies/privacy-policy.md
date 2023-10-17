@@ -5,7 +5,7 @@ subtitle: "Effective: July 25, 2023"
 layout: /src/layouts/Markdown.astro
 ---
 
-Hello! Thank you for using CraftServer and taking the time to read our Privacy Policy. This document describes how we handle the data you provide to us (the developers of CraftServer) while using CraftServer websites, services, Discord bots, and other products (the "Services"). We take privacy seriously; feel free to email us with any questions you have at <bot@craftserver.net>.
+Hello! Thank you for using CraftServer and taking the time to read our Privacy Policy. This document describes how we handle the data you provide to us (the developers of CraftServer) while using CraftServer websites, services, Discord bots, and other products (the "Services"). We take privacy seriously; feel free to ask about any questions you have by messaging @doinkythederp on Discord or joining our support server linked in the header.
 
 If you use the Services or add them to your Discord guild, you agree to the collection and use of information under the terms of this policy, so make sure you read it carefully.
 
@@ -54,4 +54,4 @@ The Services may contain links to websites that are not operated by us. We advis
 
 ## Contact us
 
-If you have any questions or suggestions about this Privacy Policy, do not hesitate to contact us at <bot@craftserver.net>. You may also join our Discord support server using the links at the top and bottom of this website.
+If you have any questions or suggestions about this Privacy Policy, do not hesitate to contact @doinkythederp on Discord. You may also join our Discord support server using the links at the top and bottom of this website.

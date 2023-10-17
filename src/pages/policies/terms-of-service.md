@@ -5,7 +5,8 @@ subtitle: "Effective: July 25, 2023"
 layout: /src/layouts/Markdown.astro
 ---
 
-Hello! Thank you for using CraftServer and taking the time to read these Terms of Service (the "Terms"). This document describes the conditions that govern your use of CraftServer websites, services, Discord bots, and other products (the "Services"). These Terms are an agreement between you and the developers of CraftServer ("we"/"us"). Feel free to email us with any questions you have at <bot@craftserver.net>.
+Hello! Thank you for using CraftServer and taking the time to read these Terms of Service (the "Terms"). This document describes the conditions that govern your use of CraftServer websites, services, Discord bots, and other products (the "Services"). These Terms are an agreement between you and the developers of CraftServer ("we"/"us"). Feel free to inquire @doinkythederp on Discord or join our support server linked in the header
+if you have any questions!
 
 By using the Services or adding them to your Discord guild, these Terms will automatically apply to you, so make sure you read them carefully.
 
@@ -49,4 +50,4 @@ The Services may contain links to websites that are not operated by us. We advis
 
 ## Contact us
 
-If you have any questions or suggestions about these Terms of Service, do not hesitate to contact us at <bot@craftserver.net>. You may also join our Discord support server using the links at the top and bottom of this website.
+If you have any questions or suggestions about these Terms of Service, do not hesitate to contact @doinkythederp on Discord. You may also join our Discord support server using the links at the top and bottom of this website.
