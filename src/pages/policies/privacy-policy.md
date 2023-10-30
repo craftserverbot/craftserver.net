@@ -1,7 +1,7 @@
 ---
 title: Privacy Policy
 description: How we handle the data you provide to us
-subtitle: "Effective: October 16, 2023"
+subtitle: "Effective: July 25, 2023"
 layout: /src/layouts/Markdown.astro
 ---
 

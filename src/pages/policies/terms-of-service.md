@@ -1,7 +1,7 @@
 ---
 title: Terms of Service
 description: Conditions for using the CraftServer services
-subtitle: "Effective: October 16, 2023"
+subtitle: "Effective: July 25, 2023"
 layout: /src/layouts/Markdown.astro
 ---
 
