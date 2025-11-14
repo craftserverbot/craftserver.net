@@ -1,7 +1,7 @@
 ---
 title: Terms of Service
 description: Conditions for using the CraftServer services
-subtitle: "Effective: July 25, 2023"
+subtitle: "Effective: November 14, 2025"
 layout: /src/layouts/Markdown.astro
 ---
 
@@ -21,19 +21,18 @@ You agree not to use the Services or contribute content to the Services in a way
 2. violates any law or regulation;
 3. violates the Discord Terms of Service;
 4. phishes for other's private information (e.g. passwords or login codes);
-5. provides you with unauthorized access to someone's computer system;
-6. negatively interferes with the experience of other users; or,
-7. copies, modifies, decompiles, reverse engineers, or otherwise attempts to obtain the source code or underlying ideas or information of the Services, any part of the Services, or our trademarks.
+5. provides you with unauthorized access to someone's computer system; or,
+6. negatively interferes with the experience of other users.
 
-You're not allowed to make derivative versions, such as a version in a different language. Any violation of the above is grounds for termination of your use of or access to the Services. The Services themselves, and all the trademarks, copyright, database rights, and other intellectual property rights related to them, still belong to us.
+You're only allowed to make derivative versions of the Services, such as a version in a different language, if doing so complies with the relevant licenses of the original product. Any violation of the above is grounds for termination of your use of or access to the Services. The Services themselves, and all the trademarks, copyright, database rights, and other intellectual property rights related to them, still belong to us.
 
 ## Changes to the Services
 
-We are committed to ensuring that the Services are as useful and efficient as possible. For that reason, we reserve the right to, at any time and for any reason, make changes to the Services, charge for your access to them, discontinue any part of them, or impose limits on them. We will never charge you for the app or its services without making it very clear to you exactly what you’re paying for.
+We reserve the right to, at any time and for any reason, make changes to the Services, charge for your access to them, discontinue any part of them, or impose limits on them. We won't charge you for the app or its services without making it very clear to you exactly what you’re paying for.
 
-## On the subject of your security
+## Security and Personal Data
 
-We store and process personal data that you have provided to us (your "Data") to provide the Services. It’s your responsibility to keep your devices with access to the Services secure. If your Discord account is compromised, attackers may be able to access, view, and modify your Data.
+We store and process the personal data that you have provided to us (your "Data") to provide the Services. It’s your responsibility to keep your devices with access to the Services secure. If your Discord account is compromised, attackers may be able to access, view, and modify your Data.
 
 ## Changes to the Terms
 
@@ -41,7 +40,7 @@ We may update our Terms from time to time. Thus, you are advised to review this 
 
 ## Our liability
 
-The Services are provided "as is" and we disclaim all warranties with regard to them including all implied warranties of merchantability and fitness. In no event shall we be liable for any special, direct, indirect, or consequential damages or any damages whatsoever resulting from loss of use, data, or profits, whether in an action of contract, negligence, or other tortious action, arising out of or in connection with the use or performance of the Services.
+The Services are provided "as is" and we disclaim all implied warranties of merchantability and fitness. In no event shall we be liable for any special, direct, indirect, or consequential damages or any damages whatsoever resulting from loss of use, data, or profits, whether in an action of contract, negligence, or other tortious action, arising out of or in connection with the use or performance of the Services.
 
 ## Links to other sites
 
