@@ -16,27 +16,24 @@ permissions:
 
 jobs:
     build:
-        runs-on: ubuntu-latest
+        runs-on: ubuntu-22.04
         steps:
             - name: Install image generators
               run: sudo apt-get update && sudo apt-get install -y imagemagick librsvg2-bin
             - name: Checkout your repository using git
-              uses: actions/checkout@v3
+              uses: actions/checkout@v5
             - name: Install, build, and upload your site
-              uses: ThatXliner/action@042a37e06d20529fc242719f4f27fe2cb5271e57
+              uses: withastro/action@v5
               with:
-                  # path: . # The root location of your Astro project inside the repository. (optional)
-                  # node-version: 16 # The specific version of Node that should be used to build your site. Defaults to 16. (optional)
-                  package-manager: pnpm # The Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile. (optional)
-                  pnpm-version: 8.x.x
+                  package-manager: pnpm@8
 
     deploy:
         needs: build
-        runs-on: ubuntu-latest
+        runs-on: ubuntu-22.04
         environment:
             name: github-pages
             url: ${{ steps.deployment.outputs.page_url }}
         steps:
             - name: Deploy to GitHub Pages
               id: deployment
-              uses: actions/deploy-pages@v1
+              uses: actions/deploy-pages@v4

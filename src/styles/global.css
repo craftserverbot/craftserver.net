@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+    --font-title: "Nunito", "Futura", sans-serif;
+    --font-sans:"Red Hat Text", "Arial", sans-serif;
+    --font-mono: "Menlo", "Monaco", "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
+
+    --color-primary: var(--color-gray-800);
+    --color-secondary: var(--color-gray-700);
+    --color-muted: var(--color-gray-400);
+    --color-discord: #35383f;
+}

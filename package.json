@@ -12,28 +12,28 @@
         "gen-icons": "sh ./scripts/icons.sh"
     },
     "dependencies": {
-        "@astrojs/tailwind": "^5.0.0",
-        "@fontsource/nunito": "^4.5.12",
-        "@fontsource/red-hat-text": "^4.5.12",
-        "@fortawesome/fontawesome-free": "^6.3.0",
-        "astro": "^3.0.10",
+        "@fontsource/nunito": "^5.2.7",
+        "@fontsource/red-hat-text": "^5.2.8",
+        "@fortawesome/fontawesome-free": "^7.1.0",
+        "@tailwindcss/vite": "^4.1.17",
+        "astro": "^5.15.8",
         "clsx": "^2.0.0",
-        "plaiceholder": "^2.5.0",
-        "remark-toc": "^8.0.1",
-        "sharp": "^0.32.5",
-        "tailwindcss": "^3.2.7"
+        "plaiceholder": "^3.0.0",
+        "remark-toc": "^9.0.0",
+        "sharp": "^0.34.5",
+        "tailwindcss": "^4.1.17"
     },
     "devDependencies": {
         "@tailwindcss/typography": "^0.5.9",
-        "@types/node": "^20.4.5",
-        "prettier": "^2.8.4",
-        "prettier-plugin-astro": "^0.8.0",
-        "typescript": "^4.9.5"
+        "@types/node": "^24.10.1",
+        "prettier": "^3.6.2",
+        "prettier-plugin-astro": "^0.14.1",
+        "typescript": "^5.9.3"
     },
-    "packageManager": "pnpm@8.6.10",
+    "packageManager": "pnpm@10.22.0+sha512.bf049efe995b28f527fd2b41ae0474ce29186f7edcb3bf545087bd61fbbebb2bf75362d1307fda09c2d288e1e499787ac12d4fcb617a974718a6051f2eee741c",
     "engines": {
-        "pnpm": "8.x",
-        "node": ">=18 <21"
+        "node": "24.x.x",
+        "pnpm": "10.x.x"
     },
     "engineStrict": true
 }

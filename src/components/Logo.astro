@@ -1,5 +1,5 @@
 ---
-import Image from "./Image.astro";
+import { Image } from "astro:assets";
 import logo from "../assets/logo.png";
 
 export interface Props {
@@ -13,6 +13,5 @@ const { small = false } = Astro.props;
     src={logo}
     alt="CraftServer logo"
     width={50 * 2}
-    aspectRatio={1 / 1}
     class={`rounded-[100%] ${small ? "w-[34px]" : "w-[50px]"} cursor-pointer`}
 />

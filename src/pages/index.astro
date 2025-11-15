@@ -12,7 +12,7 @@ import Embed from "../components/Embed.astro";
 import LinkButton from "../components/LinkButton.astro";
 import Card from "../components/Card.astro";
 import Header from "../components/Header.astro";
-import Image from "../components/Image.astro";
+import { Image } from "astro:assets";
 import Subheader from "../components/Subheader.astro";
 ---
 
@@ -74,7 +74,6 @@ import Subheader from "../components/Subheader.astro";
             class="self-center rounded-xl mb-4 shadow-lg overflow-hidden max-w-sm sm:max-w-md md:max-w-full">
             <Image
                 src={explanation}
-                previewQuality={25}
                 alt={[
                     "View info about your server without starting up Minecraft.",
                     "Easily check if your server is online.",
@@ -84,7 +83,7 @@ import Subheader from "../components/Subheader.astro";
             />
         </div>
         <div
-            class="flex flex-col-reverse lg:flex-row justify-around flex-grow mt-24 mx-20 max-sm:mx-10 gap-10">
+            class="flex flex-col-reverse lg:flex-row justify-around grow mt-24 mx-20 max-sm:mx-10 gap-10">
             <Subheader left>
                 CraftServer uses Lunar Client's server database to improve your
                 status results. When viewing compatible servers, see pretty,
@@ -98,10 +97,8 @@ import Subheader from "../components/Subheader.astro";
                 </div>
                 <Image
                     src={wavyArrow}
-                    previewQuality={25}
                     alt="Arrow"
-                    absolute
-                    class="bottom-2 left-2"
+                    class="absolute bottom-2 left-2"
                 />
                 <div
                     class="font-medium rounded-lg bg-white p-4 border-4 border-primary self-end -translate-y-5">
